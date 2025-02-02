@@ -8,8 +8,8 @@ type Destination struct {
 }
 
 type Message struct {
-	Subject string
-	Body    string
+	Subject string `json:"subject" binding:"required"`
+	Body    string `json:"body" binding:"required"`
 }
 
 type SendEmailInput struct {
